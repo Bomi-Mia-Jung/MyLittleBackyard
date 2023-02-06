@@ -6,3 +6,10 @@
     CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[AspNetUsers] ([Id]) ON DELETE CASCADE
 );
 
+
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_AspNetUserRoles_RoleId]
+    ON [dbo].[AspNetUserRoles]([RoleId] ASC);
+

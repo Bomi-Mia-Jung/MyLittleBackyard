@@ -7,3 +7,10 @@
     CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY ([UserId]) REFERENCES [dbo].[AspNetUsers] ([Id]) ON DELETE CASCADE
 );
 
+
+
+
+GO
+CREATE NONCLUSTERED INDEX [IX_AspNetUserClaims_UserId]
+    ON [dbo].[AspNetUserClaims]([UserId] ASC);
+
